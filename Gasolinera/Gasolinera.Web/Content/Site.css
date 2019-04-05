@@ -1,0 +1,134 @@
+﻿.tag {
+    cursor: pointer;
+}
+
+mark {
+    background: orange;
+    color: black;
+}
+
+.ui-autocomplete {
+    position: absolute;
+    cursor: default;
+    z-index: 1001 !important
+}
+
+
+.modal-header{
+    cursor:move;
+}
+
+.table-scroll {
+    height: 350px;
+    overflow: auto;
+    margin-top: 20px;
+}
+
+.table-scroll th{
+    text-align:center;
+}
+
+
+
+
+.preloader {
+    background-color: #ffffff;
+    opacity: .9;
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 9999;
+}
+
+    .preloader .loader {
+        margin: -30px 0 0 -30px;
+        padding: 20px;
+        box-sizing: border-box;
+        width: 60px;
+        height: 60px;
+        position: absolute;
+        top: 80%;
+        left: 50%;
+        border-radius: 50%;
+    }
+
+.mensajeEspera {
+    box-sizing: border-box;
+    position: absolute;
+    top: 20%;
+    left: 30%;
+    right: 30%;
+    text-align: center;
+}
+
+
+/*.mensajeEspera > img {
+        width: 80%;
+    }*/
+
+.ui-autocomplete {
+    z-index: 2147483647;
+}
+
+.ui-menu .ui-menu-item a {
+    font-size: 12px;
+}
+
+.ui-autocomplete {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1510 !important;
+    float: left;
+    display: none;
+    min-width: 160px;
+    width: 160px;
+    padding: 4px 0;
+    margin: 2px 0 0 0;
+    list-style: none;
+    background-color: #ffffff;
+    border-color: #ccc;
+    border-color: rgba(0, 0, 0, 0.2);
+    border-style: solid;
+    border-width: 1px;
+    -webkit-border-radius: 2px;
+    -moz-border-radius: 2px;
+    border-radius: 2px;
+    -webkit-box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+    -moz-box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+    -webkit-background-clip: padding-box;
+    -moz-background-clip: padding;
+    background-clip: padding-box;
+    *border-right-width: 2px;
+    *border-bottom-width: 2px;
+}
+
+.ui-menu-item > a.ui-corner-all {
+    display: block;
+    padding: 3px 15px;
+    clear: both;
+    font-weight: normal;
+    line-height: 18px;
+    color: #555555;
+    white-space: nowrap;
+    text-decoration: none;
+}
+
+.ui-state-hover, .ui-state-active {
+    color: #ffffff;
+    text-decoration: none;
+    background-color: #0088cc;
+    border-radius: 0px;
+    -webkit-border-radius: 0px;
+    -moz-border-radius: 0px;
+    background-image: none;
+}
+
+
+.btn-blanco, .btn-blanco:hover {
+    background-color: white;
+    color: black;
+}
