@@ -1,0 +1,22 @@
+﻿
+<script>
+    
+    function _notificacionJs(mensaje, exitosa) {
+        
+        
+        if (exitosa=="True") {
+            toastr.success('<strong>Intranet VN</strong>: ' + mensaje);
+        }
+        else {
+            toastr.warning('<strong>Intranet VN</strong>: ' + mensaje);
+        }
+
+        /*
+        success
+        info
+        warning
+        error
+        */
+    }
+
+</script>

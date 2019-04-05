@@ -1,0 +1,169 @@
+﻿@using Gasolinera.Web.Helpers;
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title - Intranet VN</title>
+
+    <meta name="robots" content="nofollow" />
+
+    @*<script src="~/Scripts/jquery-1.10.2.js"></script>*@
+
+    <script src="~/Scripts/jquery-3.1.1.min.js"></script>
+    <meta name="theme-color" content="#ffffff">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400italic,500,700">
+    @*<link rel="stylesheet" href="~/Assets/css/contacts.min.css">*@
+    
+    <link rel="stylesheet" href="~/Assets/css/vendor.min.css">
+    <link rel="stylesheet" href="~/Assets/css/elephant.min.css">
+    <link rel="stylesheet" href="~/Assets/css/application.min.css">
+
+    @*<link rel="stylesheet" href="~/Assets/css/dashboard-3.min.css">
+    <link rel="stylesheet" href="~/Assets/css/profile.min.css">
+    <link rel="stylesheet" href="~/Assets/css/login-3.min.css">
+    <link rel="stylesheet" href="~/Assets/css/signup-3.min.css">*@
+
+    <link href="~/Content/bootstrap-datetimepicker.css" rel="stylesheet" />
+
+    <script src="~/Assets/js/demo.min.js"></script>
+    <script src="~/Scripts/highcharts/4.2.0/highcharts.js"></script>
+    <script src="~/Scripts/highcharts/4.2.0/highcharts-3d.js"></script>
+    <script src="~/Scripts/highcharts/4.2.0/modules/exporting.js"></script>
+    <script src="~/Scripts/highcharts/4.2.0/modules/data.js"></script>
+    @*<script src="~/Scripts/highcharts/4.2.0/themes/grid-light.js"></script>*@
+    @*<script src="~/Scripts/highcharts/4.2.0/themes/dark-unica.js"></script>*@
+    <script src="~/Scripts/ckeditor/ckeditor.js"></script>
+    <link href="~/Content/font-awesome.min.css" rel="stylesheet" />
+    <link href="~/Content/Site.css" rel="stylesheet" />
+
+
+
+    @*<link href="~/Content/jquery-ui.css" rel="Stylesheet" />*@
+
+
+
+</head>
+<body class="layout layout-header-fixed">
+
+    <div class="preloader" id="loader">
+        <div class="mensajeEspera">
+            <img src="~/Content/images/Logo.png" width="350" />
+            <div class="loader"></div>
+            <br /> <span id="mensajeRandom"></span>
+        </div>
+    </div>
+
+    <div class="layout-header">
+        <div class="navbar navbar-default">
+            <div class="navbar-header">
+                <a class="navbar-brand navbar-brand-center" href="/">
+                    <img class="navbar-brand-logo" src="~/Content/images/logo.png" alt="Logo">
+                </a>
+                <button class="navbar-toggler visible-xs-block collapsed" type="button" data-toggle="collapse" data-target="#sidenav">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="bars">
+                        <span class="bar-line bar-line-1 out"></span>
+                        <span class="bar-line bar-line-2 out"></span>
+                        <span class="bar-line bar-line-3 out"></span>
+                    </span>
+                    <span class="bars bars-x">
+                        <span class="bar-line bar-line-4"></span>
+                        <span class="bar-line bar-line-5"></span>
+                    </span>
+                </button>
+                <button class="navbar-toggler visible-xs-block collapsed" type="button" data-toggle="collapse" data-target="#navbar">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="arrow-up"></span>
+                    <span class="ellipsis ellipsis-vertical">
+                        <img class="ellipsis-object" width="32" height="32" src="~/Assets/img/0180441436.jpg" alt="Teddy Wilson">
+                    </span>
+                </button>
+            </div>
+            <div class="navbar-toggleable">
+                <nav id="navbar" class="navbar-collapse collapse">
+                    <button class="sidenav-toggler hidden-xs" title="Collapse sidenav ( [ )" aria-expanded="true" type="button">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="bars">
+                            <span class="bar-line bar-line-1 out"></span>
+                            <span class="bar-line bar-line-2 out"></span>
+                            <span class="bar-line bar-line-3 out"></span>
+                            <span class="bar-line bar-line-4 in"></span>
+                            <span class="bar-line bar-line-5 in"></span>
+                            <span class="bar-line bar-line-6 in"></span>
+                        </span>
+                    </button>
+                    <ul class="nav navbar-nav navbar-right">
+                        <li class="visible-xs-block">
+                        </li>
+                        <li class="dropdown hidden-xs">
+                            @Html.Partial("~/Views/Shared/_LoginPartial.cshtml")
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </div>
+    <div class="layout-main">
+        <div class="layout-sidebar">
+            <div class="layout-sidebar-backdrop"></div>
+            <div class="layout-sidebar-body">
+                <div class="custom-scrollbar">
+                    <nav id="sidenav" class="sidenav-collapse collapse">
+                        <ul class="sidenav">
+                            @*<li class="sidenav-search hidden-md hidden-lg">
+                                <form class="sidenav-form" action="/">
+                                    <div class="form-group form-group-sm">
+                                        <div class="input-with-icon">
+                                            <input class="form-control" type="text" placeholder="Search…">
+                                            <span class="icon icon-search input-icon"></span>
+                                        </div>
+                                    </div>
+                                </form>
+                            </li>*@
+                            <li class="sidenav-heading">Navegación</li>
+                            <li class="sidenav-item @Html.IsSelected(actions: "Index", controllers: "Home")">
+                                <a href="@Url.Action("Index", "Home", null, null)">
+                                    <span class="sidenav-icon icon icon-th"></span>
+                                    <span class="sidenav-label">Inicio</span>
+                                </a>
+                            </li>
+
+
+
+
+
+
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+        </div>
+        <div class="layout-content">
+            @RenderBody()
+        </div>
+    </div>
+
+
+        @Html.Partial("~/Views/Shared/_partialNotifications.cshtml")
+
+
+
+        <script src="~/Assets/js/vendor.js"></script>
+        <script src="~/Assets/js/elephant.min.js"></script>
+        <script src="~/Assets/js/application.min.js"></script>
+        <script src="~/Scripts/jquery-ui.js"></script>
+        <script src="~/Scripts/moment-with-locales.min.js"></script>
+        <script src="~/Scripts/bootstrap-datetimepicker.js"></script>
+        <script src="~/Assets/js/contacts.min.js"></script>
+        <script src="~/Scripts/jsCustom.js"></script>
+
+
+        <script src="~/Scripts/jquery.validate.js"></script>
+        <script src="~/Scripts/jquery.validate.unobtrusive.js"></script>
+        <script src="~/Scripts/jquery.unobtrusive-ajax.min.js"></script>
+        @RenderSection("scripts", required: false)
+</body>
+</html>
